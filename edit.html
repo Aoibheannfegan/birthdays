@@ -1,0 +1,23 @@
+{% extends index.html %}
+
+{% block body %}
+    <body>
+        <div class="jumbotron">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <!-- TODO: Create a form for users to submit a name, a month, and a day -->
+                <h2>Add a Birthday</h2>
+                <form action="/edit/{{ birthday_edit.id }}" method="post">
+                    <input autocomplete="off" autofocus placeholder="Name" name="name" type="text" value="{{ edit_birthday.name }}">
+                    <input autocomplete="off" autofocus placeholder="Month" name="month" type="text">
+                    <input autocomplete="off" autofocus placeholder="Day" name="day" type="text">
+                    <input type="submit" value="Update Birthday">
+                </form>
+
+            </div>
+        </div>
+    </body>
+
+{% endblock %}
